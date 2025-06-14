@@ -20,12 +20,10 @@ public:
 
         int sum = 0;
 
-        // Check if grandparent exists and has even value
         if (grandparent && grandparent->val % 2 == 0) {
             sum += current->val;
         }
 
-        // Recurse to left and right child
         sum += dfs(current->left, current, parent);
         sum += dfs(current->right, current, parent);
 
